@@ -1,3 +1,8 @@
+*{
+    box-sizing: border-box;
+
+}
+
 .modal {
     position: fixed;
     top: 0;
@@ -7,10 +12,329 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: 10;
-    > div {
-        padding: 24px;
-        background-color: white;
+}
+
+.modal > div {
+    padding: 24px;
+    background-color: white;
+    text-align: center;
+}
+
+.modal button {
+    margin: 8px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    background-color: #4caf50;
+}
+
+.modal button:first-child {
+    background-color: #514e4e;
+}
+
+.modal button:nth-child(2) {
+    background-color: #9a2d2d;
+}
+
+
+.signInForm {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
     }
+
+    input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    button, a {
+        background-color: #989696;
+        cursor: pointer;
+        text-decoration: none;
+        width: 45%;
+        padding: 8px;
+        margin: 8px 5px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        color: white;
+    }
+
+    a {
+        background-color: #45a049;
+        color: white;
+    }
+
+    a:hover {
+        background-color: rgba(69, 160, 73, 0.68);
+    }
+
+    button:hover {
+        background-color: #ddd;
+    }
+}
+
+.signUpForm {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    input[type="text"],
+    input[type="password"],
+    button,
+    a {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #6868ff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    a {
+        background-color: #45a049;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    a:hover {
+        background-color: rgba(69, 160, 73, 0.89);
+    }
+}
+
+.navBar {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navCenter {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.navBar a, .navBar button {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navBar a:hover, .navBar button:hover {
+    background-color: #555;
+}
+
+.navBar button {
+    background-color: #4caf50;
+    border: none;
+    cursor: pointer;
+}
+
+.navBar button:hover {
+    background-color: #45a049;
+}
+
+.tableContainer {
+    max-width: 800px;
+    margin: 100px auto;
+}
+
+.tableContainer table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableContainer th,
+.tableContainer td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+.tableContainer thead tr {
+    background-color: #f2f2f2;
+}
+
+.tableContainer a {
+    padding: 5px 10px;
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.deleteButton {
+    padding: 5px 10px;
+    background-color: #d12727;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.formContainer {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.formContainer form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formContainer > form > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.formContainer label {
+    margin-bottom: 8px;
+}
+
+.formContainer input,
+.formContainer select {
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.formContainer button,
+.formContainer a {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.formContainer a {
+    background-color: #c3c3c3;;
+    color: white;
+}
+
+.formContainer button {
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+}
+
+.formContainer button:hover {
+    background-color: rgba(76, 175, 80, 0.86);
+}
+
+.formContainer h4 {
+    margin-top: 10px;
+    color: red;
+}
+
+.formContainer table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 16px;
+}
+
+.formContainer th,
+.formContainer td {
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.formContainer th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+.formContainer input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.formContainer input[type="date"],
+.formContainer input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.error-container{
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    margin-top: 15px;
+    border-radius: 5px;
 }

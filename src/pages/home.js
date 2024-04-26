@@ -11,7 +11,7 @@ const Home = () => {
         name: "",
     });
 
-    const showModal = ( nid,name) => {
+    const showModal = (nid, name) => {
         setStudentForDelete({
             nid: nid,
             name: name,
@@ -25,7 +25,7 @@ const Home = () => {
 
 
     return (
-        <>
+        <div className="tableContainer">
             <table key={data.length}>
                 <thead>
                 <tr>
@@ -57,7 +57,7 @@ const Home = () => {
                         <td>{item.courses.filter(course => course.subscribed).length}</td>
                         <td>
                             <Link to={"/student?nid=" + item.NID}>Editimi</Link>
-                            <button onClick={() => showModal(item.NID, item.name)}>Fshi</button>
+                            <button className="deleteButton" onClick={() => showModal(item.NID, item.name)}>Fshi</button>
                         </td>
                     </tr>
                 ))}
@@ -66,7 +66,7 @@ const Home = () => {
             {isModalOpen && (
                 <Modal onClose={closeModal} name={studentForDelete.name} nid={studentForDelete.nid}/>
             )}
-        </>
+        </div>
     );
 };
 

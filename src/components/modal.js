@@ -16,8 +16,7 @@ const Modal = ({name, nid, onClose}) => {
                 <button onClick={handleDelete}>Po</button>
                 <button onClick={onClose}>Jo</button>
             </div>
-        </div>
-    );
+        </div>);
 };
 
 

@@ -8,10 +8,10 @@ function Navbar(){
     }
 
     return(
-        <>
-            <Link to={"/home"}>Home</Link>
+        <div className="navBar">
+            <Link to={"/home"} className="navCenter">Home</Link>
             <button onClick={logout}>Dil</button>
-        </>
+        </div>
     );
 }
 
